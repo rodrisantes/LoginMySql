@@ -12,8 +12,6 @@ app.use(cookieParser())
 
 app.set("view engine", "ejs")
 
-const PORT = process.env.PORT
-
 app.use("/", require("./routes/routes"))
 
 app.use(function(req,res,next){
@@ -28,5 +26,5 @@ next();
 
 
 app.listen(3001, ()=>{
-    console.log("Server listening on port " + PORT)
+    console.log("Server listening on port " + process.env.PORT)
 })
