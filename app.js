@@ -25,6 +25,6 @@ next();
 
 
 
-app.listen(process.env.PORT, ()=>{
+app.listen(`0.0.0.0:$PORT`, ()=>{
     console.log("Server listening on port " + process.env.PORT)
 })
